@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MIS.Data.Providers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,8 @@ namespace MIS.API.Controllers
         public ActionResult Index()
         {
             ViewBag.Title = "Home Page";
-
+            EthnicProvider ethnicProvider = new EthnicProvider();
+            ethnicProvider.GetAllEthnic();
             return View();
         }
     }
