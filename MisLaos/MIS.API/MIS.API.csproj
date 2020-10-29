@@ -343,8 +343,11 @@
     <Compile Include="AuthorizationServiceProvider.cs" />
     <Compile Include="AuthorizeAttribute.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+<<<<<<< HEAD
     <Compile Include="Controllers\HouseHoldController.cs" />
     <Compile Include="Controllers\MapController.cs" />
+=======
+>>>>>>> c9adf8e7ecf2fa00727c16bb51b1e5a229a0ebb7
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -515,16 +518,16 @@
     <Content Include="Scripts\jquery-3.5.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MIS.Data\MIS.Data.csproj">
+      <Project>{3FCBE265-BE0D-4B24-B5DD-2730F26A8532}</Project>
+      <Name>MIS.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\MIS.Data\MIS.Data.csproj">
-      <Project>{3fcbe265-be0d-4b24-b5dd-2730f26a8532}</Project>
-      <Name>MIS.Data</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
