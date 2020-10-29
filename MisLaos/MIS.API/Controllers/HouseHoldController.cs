@@ -23,5 +23,6 @@ namespace MIS.API.Controllers
             List<HouseHoldViewModel> houseHoldViewModels = _houseHoldProvider.SearchHouseHold("", "", "", "", -1, -1, "");
             return Ok(houseHoldViewModels);
         }
+
     }
 }
