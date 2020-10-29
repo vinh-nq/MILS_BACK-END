@@ -34,6 +34,7 @@ F:\Project\MISLAOS\MILS_BACK-END\MisLaos\MIS.Data\obj\Debug\MIS.Data.csproj.Core
 F:\Project\MISLAOS\MILS_BACK-END\MisLaos\MIS.Data\obj\Debug\MIS.Data.csproj.CopyComplete
 F:\Project\MISLAOS\MILS_BACK-END\MisLaos\MIS.Data\obj\Debug\MIS.Data.dll
 F:\Project\MISLAOS\MILS_BACK-END\MisLaos\MIS.Data\obj\Debug\MIS.Data.pdb
+<<<<<<< HEAD
 D:\Work Space\Project\MisLaos\MILS_BACK-END\MisLaos\MIS.Data\obj\Debug\MIS.Data.csproj.CoreCompileInputs.cache
 D:\Work Space\Project\MisLaos\MILS_BACK-END\MisLaos\MIS.Data\bin\Debug\MIS.Data.dll.config
 D:\Work Space\Project\MisLaos\MILS_BACK-END\MisLaos\MIS.Data\bin\Debug\MIS.Data.dll
@@ -272,3 +273,5 @@ F:\Project\MISLAOS\1\MILS_BACK-END\MisLaos\MIS.Data\obj\Debug\MIS.Data.csproj.Co
 F:\Project\MISLAOS\1\MILS_BACK-END\MisLaos\MIS.Data\obj\Debug\MIS.Data.csproj.CopyComplete
 F:\Project\MISLAOS\1\MILS_BACK-END\MisLaos\MIS.Data\obj\Debug\MIS.Data.dll
 F:\Project\MISLAOS\1\MILS_BACK-END\MisLaos\MIS.Data\obj\Debug\MIS.Data.pdb
+=======
+>>>>>>> 616a1326c2607d0015a549de7d3ee8db92f5e462

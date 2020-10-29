@@ -31,17 +31,17 @@ namespace MIS.Data.Providers
                         user.Mobilephone = await sqlDataReader.GetFieldValueAsync<string>(4);
                         user.Email = await sqlDataReader.GetFieldValueAsync<string>(5);
                         user.Department = await sqlDataReader.GetFieldValueAsync<string>(6);
-                        user.Type = await sqlDataReader.GetFieldValueAsync<char>(7);
-                        user.Admin = await sqlDataReader.GetFieldValueAsync<int>(8);
+                        user.Type = await sqlDataReader.GetFieldValueAsync<string>(7);
+                        user.Admin = (await sqlDataReader.GetFieldValueAsync<DBNull>(8) != DBNull.Value) ? await sqlDataReader.GetFieldValueAsync<int>(8) : 0;
                         user.Enabled = await sqlDataReader.GetFieldValueAsync<int>(9);
                         user.RoleId = await sqlDataReader.GetFieldValueAsync<int>(10);
                         user.Active = await sqlDataReader.GetFieldValueAsync<int>(11);
-                        user.CreatedBy = await sqlDataReader.GetFieldValueAsync<string>(12);
+                        user.CreatedBy = (await sqlDataReader.GetFieldValueAsync<DBNull>(8) != DBNull.Value) ? await sqlDataReader.GetFieldValueAsync<string>(12) : "";
                     }
                 }
                 return user;
             }
-            catch
+            catch (Exception e)
             {
                 return null;
             }
@@ -67,12 +67,12 @@ namespace MIS.Data.Providers
                         user.Mobilephone = await sqlDataReader.GetFieldValueAsync<string>(4);
                         user.Email = await sqlDataReader.GetFieldValueAsync<string>(5);
                         user.Department = await sqlDataReader.GetFieldValueAsync<string>(6);
-                        user.Type = await sqlDataReader.GetFieldValueAsync<char>(7);
-                        user.Admin = await sqlDataReader.GetFieldValueAsync<int>(8);
+                        user.Type = await sqlDataReader.GetFieldValueAsync<string>(7);
+                        user.Admin = (await sqlDataReader.GetFieldValueAsync<DBNull>(8) != DBNull.Value) ? await sqlDataReader.GetFieldValueAsync<int>(8) : 0;
                         user.Enabled = await sqlDataReader.GetFieldValueAsync<int>(9);
                         user.RoleId = await sqlDataReader.GetFieldValueAsync<int>(10);
                         user.Active = await sqlDataReader.GetFieldValueAsync<int>(11);
-                        user.CreatedBy = await sqlDataReader.GetFieldValueAsync<string>(12);
+                        user.CreatedBy = (await sqlDataReader.GetFieldValueAsync<DBNull>(8) != DBNull.Value) ? await sqlDataReader.GetFieldValueAsync<string>(12) : "";
                     }
                 }
                 return user;

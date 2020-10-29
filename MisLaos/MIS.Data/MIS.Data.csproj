@@ -255,7 +255,11 @@
     <Compile Include="DBConnection\MISConnection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\EthnicProvider.cs" />
+<<<<<<< HEAD
     <Compile Include="Providers\HouseHoldProvider.cs" />
+=======
+    <Compile Include="Providers\PermissionProvider.cs" />
+>>>>>>> 616a1326c2607d0015a549de7d3ee8db92f5e462
     <Compile Include="Providers\UserProvider.cs" />
     <Compile Include="ViewModels\FunctionViewModel.cs" />
     <Compile Include="ViewModels\HouseHoldViewModel.cs" />
