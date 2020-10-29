@@ -256,13 +256,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\DistrictProvider.cs" />
     <Compile Include="Providers\EthnicProvider.cs" />
-<<<<<<< HEAD
+    <Compile Include="ViewModels\HouseHoldViewModel.cs" />
     <Compile Include="Providers\HouseHoldProvider.cs" />
     <Compile Include="Providers\PermissionProvider.cs" />
     <Compile Include="Providers\ProvinceProvider.cs" />
-=======
     <Compile Include="Providers\PermissionProvider.cs" />
->>>>>>> c9adf8e7ecf2fa00727c16bb51b1e5a229a0ebb7
     <Compile Include="Providers\UserProvider.cs" />
     <Compile Include="Providers\VillageProvider.cs" />
     <Compile Include="ViewModels\DistrictViewModel.cs" />
@@ -279,9 +277,6 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Providers\HTMLPage1.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

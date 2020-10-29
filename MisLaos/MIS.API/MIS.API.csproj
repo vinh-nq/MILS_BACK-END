@@ -343,11 +343,11 @@
     <Compile Include="AuthorizationServiceProvider.cs" />
     <Compile Include="AuthorizeAttribute.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-<<<<<<< HEAD
+
     <Compile Include="Controllers\HouseHoldController.cs" />
     <Compile Include="Controllers\MapController.cs" />
-=======
->>>>>>> c9adf8e7ecf2fa00727c16bb51b1e5a229a0ebb7
+
+
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
