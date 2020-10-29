@@ -16,7 +16,7 @@ namespace MIS.Data.ViewModels
         public string Mobilephone { get; set; }
         public string Email { get; set; }
         public string Department { get; set; }
-        public Char Type { get; set; }
+        public string Type { get; set; }
         public Nullable<int> Admin { get; set; }
         public Nullable<int> Enabled { get; set; }
         public Nullable<int> RoleId { get; set; }
@@ -32,7 +32,7 @@ namespace MIS.Data.ViewModels
             this.Mobilephone = row["Mobilephone"].ToString();
             this.Email = row["Email"].ToString();
             this.Department = row["Department"].ToString();
-            this.Type = (char)row["Type"];
+            this.Type = (string)row["Type"];
             this.Admin = int.Parse(row["Admin"].ToString());
             this.Enabled = (int)row["Enabled"];
             this.RoleId = (int)row["fk_role_id"];

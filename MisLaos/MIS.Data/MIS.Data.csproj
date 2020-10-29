@@ -255,6 +255,7 @@
     <Compile Include="DBConnection\MISConnection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\EthnicProvider.cs" />
+    <Compile Include="Providers\PermissionProvider.cs" />
     <Compile Include="Providers\UserProvider.cs" />
     <Compile Include="ViewModels\FunctionViewModel.cs" />
     <Compile Include="ViewModels\PermissionViewModel.cs" />

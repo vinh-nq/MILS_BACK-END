@@ -56,46 +56,46 @@ namespace MIS.API
                 //Authenticate the user credentials
                 if (!string.IsNullOrEmpty(context.UserName))
                 {
-                    //var userLog = new UserProvider().GetByUserName(context.UserName);
-                    //if (userLog != null)
-                    //{
-                    //    var user = new UserProvider().GetByUserNameAndPassword(context.UserName, context.Password);
-                    //    if (user != null)
-                    //    {
-                    //        var chucNangs = new LienKetNhomNguoiDungChucNangProvider().GetByNguoiDung(user.NguoiDungId);
-                    //        identity.AddClaim(new Claim(ClaimTypes.Role, "ALL"));
-                    //        foreach (var item in chucNangs)
-                    //        {
-                    //            identity.AddClaim(new Claim(ClaimTypes.Role, item.ChucNang.AuthCode));
-                    //        }
-                    //        identity.AddClaim(new Claim("username", context.UserName));
-                    //        identity.AddClaim(new Claim(ClaimTypes.Name, context.UserName));
-                    //        var props = new AuthenticationProperties(new Dictionary<string, string>
-                    //        {
-                    //            {
-                    //                "EmailNguoiDung", context.UserName
-                    //            },
-                    //            {
-                    //                "NguoiDungId", user.NguoiDungId.ToString()
-                    //            },
-                    //            {
-                    //                "TenNguoiDung", user.TenNguoiDung
-                    //            }
-                    //        });
-                    //        var ticket = new AuthenticationTicket(identity, props);
-                    //        context.Validated(ticket);
-                    //    }
-                    //    else
-                    //    {
-                    //        context.SetError("invalid_grant", "Mật khẩu không chính xác");
-                    //        return;
-                    //    }
-                    //}
-                    //else
-                    //{
-                    //    context.SetError("invalid_grant", "Tài khoản không tồn tại");
-                    //    return;
-                    //}
+                    var userLog = new UserProvider().GetByUserName(context.UserName).Result;
+                    if (userLog != null)
+                    {
+                        var user = new UserProvider().GetByUserNameAndPassword(context.UserName, context.Password).Result;
+                        if (user != null)
+                        {
+                            var chucNangs = new PermissionProvider().GetByRoleId(user.RoleId.Value).Result;
+                            identity.AddClaim(new Claim(ClaimTypes.Role, "ALL"));
+                            foreach (var item in chucNangs)
+                            {
+                                identity.AddClaim(new Claim(ClaimTypes.Role, item.FunctionCode));
+                            }
+                            identity.AddClaim(new Claim("username", context.UserName));
+                            identity.AddClaim(new Claim(ClaimTypes.Name, context.UserName));
+                            var props = new AuthenticationProperties(new Dictionary<string, string>
+                            {
+                                {
+                                    "UserName", context.UserName
+                                },
+                                {
+                                    "UserId", user.UserId.ToString()
+                                },
+                                {
+                                    "FullName", user.FullName
+                                }
+                            });
+                            var ticket = new AuthenticationTicket(identity, props);
+                            context.Validated(ticket);
+                        }
+                        else
+                        {
+                            context.SetError("invalid_grant", "Mật khẩu không chính xác");
+                            return;
+                        }
+                    }
+                    else
+                    {
+                        context.SetError("invalid_grant", "Tài khoản không tồn tại");
+                        return;
+                    }
                 }
                 else
                 {
