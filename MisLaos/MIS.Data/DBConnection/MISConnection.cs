@@ -28,7 +28,6 @@ namespace MIS.Data.Model
             instance = new MySqlConnection(connectionString);
             instance.Open();
             return instance;
-
         }
     }
 }
